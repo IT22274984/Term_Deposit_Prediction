@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Prediction Result</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="prediction-container">
+            <p>Will the client subscribe for a term deposit?</p>
+            <p class="prediction-result">{{ result }}</p>
+        </div>
+        
+
+        <h1>Subscription Probability Trend</h1>
+        <img src="data:image/png;base64,{{ trend_graph_base64 }}" alt="Trend Graph" style="max-width: 100%; height: auto;">
+
+        <div class="accuracy-container">
+            <p><strong>Model Accuracy: 89.94%</strong> </p>
+        </div>
+        
+        <form action="/" method="get">
+            <button type="submit">Predict Again</button>
+        </form>
+
+
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Term Deposit Prediction. All rights reserved.</p>
+    </footer>
+</body>
+</html>

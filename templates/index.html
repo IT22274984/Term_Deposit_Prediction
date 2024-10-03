@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Term Deposit Prediction</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h2>Term Deposit Prediction</h2>
+        <form action="/predict" method="post" id="predictionForm">
+
+            <div class="form-wrapper">
+                
+                <!-- Flex Container for Personal & Financial Details -->
+                <div class="flex-container">
+                    
+                    <!-- Personal Details Section -->
+                    <div class="section-container">
+                        <h1>Personal Details</h1>
+                        
+                        <label for="job">Job</label>
+                        <select id="job" name="job" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="management">Management</option>
+                            <option value="technician">Technician</option>
+                            <option value="blue-collar">Blue-collar</option>
+                            <option value="unknown">Unknown</option>
+                            <option value="admin.">Admin</option>
+                            <option value="retired">Retired</option>
+                            <option value="services">Services</option>
+                            <option value="entrepreneur">Entrepreneur</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="housemaid">Housemaid</option>
+                            <option value="student">Student</option>
+                        </select>
+                
+                        <label for="marital">Marital Status</label>
+                        <select id="marital" name="marital" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="married">Married</option>
+                            <option value="single">Single</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                    
+                        <label for="education">Education</label>
+                        <select id="education" name="education" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="tertiary">Tertiary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="primary">Primary</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                        
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="18" max="80" required>
+                    </div>
+
+                    <!-- Financial Details Section -->
+                    <div class="section-container">
+                        <h1>Financial Details</h1>
+
+                        <label for="default">Credit in Default</label>
+                        <select id="default" name="default" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                        
+                        
+
+                        <label for="housing">Housing Loan</label>
+                        <select id="housing" name="housing" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+
+                        <label for="loan">Personal Loan</label>
+                        <select id="loan" name="loan" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+
+                        <label for="balance">Average annual balance</label>
+                        <input type="number" name="balance" id="balance" required>
+                    </div>
+                </div>
+
+                <!-- Campaign Details Section -->
+                <div class="section-container">
+                    <h1>Campaign Details</h1>
+                
+                    <label for="contact">Contact Type</label>
+                    <select id="contact" name="contact" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="unknown">Unknown</option>
+                        <option value="cellular">Cellular</option>
+                        <option value="telephone">Telephone</option>
+                    </select>
+
+                    <label for="poutcome">Previous Campaign Outcome</label>
+                    <select id="poutcome" name="poutcome" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="unknown">Unknown</option>
+                        <option value="failure">Failure</option>
+                        <option value="other">Other</option>
+                        <option value="success">Success</option>
+                    </select>
+                    
+                    <label for="month">Last Contact Month</label>
+                    <select id="month" name="month" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov">November</option>
+                        <option value="dec">December</option>
+                    </select>
+
+                    <label for="day">Last Contact Day</label>
+                    <input type="number" name="day" id="day" required>
+
+                    <label for="duration">Duration of Last Contact (in seconds)</label>
+                    <input type="number" name="duration" id="duration" required>
+
+                    <label for="campaign">Number of Contacts During the Campaign</label>
+                    <input type="number" name="campaign" id="campaign" required>
+
+                </div>
+            </div>
+
+            <button type="submit">Predict</button>
+
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Term Deposit Prediction. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e7d5fa, #d0e0fc);
+    margin: 0;
+    padding: 5px;
+}
+
+/* Style for the h2 Title */
+h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.0em; /* Increased font size for more impact */
+    color: #333; /* A dark gray for a softer look than pure black */
+    margin-bottom: 20px; /* Increased space below the title */
+    font-weight: 700; /* Slightly heavier font weight */
+    padding: 10px; /* Increased padding for breathing space */
+    border-bottom: 3px solid #7a8b9c; /* Underline effect with a vibrant blue color */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Add a hover effect */
+h2:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+    color: #555; /* Change color on hover to a dark gray */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Flex Container for Personal and Financial Details */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between Personal and Financial sections */
+}
+
+/* Section Container */
+.section-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 1.5em;
+    margin-bottom: 22px;
+}
+
+.section-container h1 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* Form Inputs and Select Elements */
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 3px rgba(106, 17, 203, 0.5);
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #218838, #1e7e34);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #2e2727;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+footer p {
+    margin: 0; /* Remove any default margin */
+    font-size: 1.2em; /* Slightly smaller font size */
+    color: #333; /* Dark gray text */
+}
+/* Media Query for Larger Screens */
+@media (min-width: 601px) {
+    .container {
+        max-width: 800px; /* Compact but still usable on larger screens */
+    }
+}
+
+
+/* Result page styling */
+.prediction-container {
+    text-align: center; /* Center the text */
+    font-family: 'Poppins', sans-serif; /* Use your preferred font */
+    margin-top: 20px; /* Space above the prediction box */
+}
+
+/* Style for the question text */
+p {
+    font-size: 1.5em; /* Slightly larger font for readability */
+    color: #181717; /* Standard color */
+    margin: 5px 0; /* Margin to separate the text */
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+
+/* Style for the result text */
+.prediction-result {
+    font-size: 2.0em; /* Make the result text larger */
+    font-weight: bold; /* Make it bold */
+    color: #c72424; /* Use a different color for the result (green in this case) */
+    margin-bottom: 30px;
+}
+.accuracy-container{
+    text-align: center;
+
+}
